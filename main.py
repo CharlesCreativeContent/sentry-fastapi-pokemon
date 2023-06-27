@@ -1,6 +1,6 @@
 # main.py
 from fastapi import FastAPI, Request
-from pokedex import Images, Routes, Pokemon, Items, Moves, Types, Skins, defaultSkins
+from pokedex import Images, Routes, Pokemon, Items, Moves, Types, Skins, DefaultSkins
 
 app = FastAPI()
 
