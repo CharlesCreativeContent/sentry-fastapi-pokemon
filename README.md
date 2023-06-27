@@ -29,7 +29,7 @@ To deploy the application on Vercel, you will need to:
 
 + Create a new project on Vercel and link it to your cloned repository.
 
-+ To use Sentry, you will need to sign in to your Sentry account from [Vercel Integration Dashboard](https://vercel.com/integrations/sentry).
++ You can use Sentry Monitoring by signing in to Sentry account from [Vercel Integration Dashboard](https://vercel.com/integrations/sentry).
 
 + Deploy the application.
 
