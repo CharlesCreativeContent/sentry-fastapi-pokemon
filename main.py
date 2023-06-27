@@ -41,7 +41,36 @@ async def root():
     return Skins
 
 @app.get("/moves/{move_id}")
-def read_root(move_id: str, request: Request):
-    client_host = request.client.host
+def read_root(move_id: str):
     foundMove = Moves.get(move_id,"Not Found")
-    return {"move_id": foundMove}
+    return {move_id: foundMove}
+
+@app.get("/skins/{skin_id}")
+def read_root(skin_id: str):
+    foundSkin = Skins.get(skin_id,"Not Found")
+    return {skin_id: foundSkin}
+
+@app.get("/types/{type_id}")
+def read_root(type_id: str):
+    foundType = Types.get(type_id,"Not Found")
+    return {type_id: foundType}
+
+@app.get("/items/{item_id}")
+def read_root(item_id: str):
+    foundItem = Items.get(item_id,"Not Found")
+    return {item_id: foundItem}
+
+@app.get("/pokemon/{pokemon_id}")
+def read_root(pokemon_id: str):
+    foundPokemon = Pokemon.get(pokemon_id,"Not Found")
+    return {pokemon_id: foundPokemon}
+
+@app.get("/routes/{route_id}")
+def read_root(route_id: str):
+    foundRoute = Routes.get(route_id,"Not Found")
+    return {route_id: foundRoute}
+
+@app.get("/images/{image_id}")
+def read_root(image_id: str):
+    foundImage = Images.get(image_id,"Not Found")
+    return {image_id: foundImage}
