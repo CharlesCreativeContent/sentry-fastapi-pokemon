@@ -39,3 +39,8 @@ async def root():
 @app.get("/skins")
 async def root():
     return Skins
+
+
+@app.get("/moves/{moveNameOrID}")
+async def root():
+    return moveNameOrID
