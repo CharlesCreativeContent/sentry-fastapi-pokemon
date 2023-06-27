@@ -43,5 +43,4 @@ async def root():
 @app.get("/moves/{move_id}")
 def read_root(move_id: str, request: Request):
     client_host = request.client.host
-    foundMove = Moves[move_id]
     return {"move_id": move_id}
