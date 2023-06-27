@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Homepage"}
+    return {"message": "New"}
 
 @app.get("/images")
 async def root():
@@ -34,7 +34,7 @@ async def root():
 
 @app.get("/defaultSkins")
 async def root():
-    return defaultSkins
+    return DefaultSkins
 
 @app.get("/skins")
 async def root():
