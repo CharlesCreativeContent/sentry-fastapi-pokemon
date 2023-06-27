@@ -4,22 +4,22 @@ The Sentry-FastAPI-Demo is a backend application built with FastAPI and integrat
 ## Repository Structure
 The repository contains the following key files:
 
-+ main.py: This is the main application file where the FastAPI application is defined.
++ __main.py__: This is the main application file where the FastAPI application is defined.
 
-+ requirements.txt: This file lists the Python dependencies required by the application.
++ __requirements.txt__: This file lists the Python dependencies required by the application.
 
-+ vercel.json: This file contains the configuration settings for deploying the application on Vercel.
++ __vercel.json__: This file contains the configuration settings for deploying the application on Vercel.
 
-+ pokedex.py: This file contains the pokemon data to be served.
++ __pokedex.py__: This file contains the pokemon data to be served.
 
 ## Getting Started
 To get started with this template, follow these steps:
 
-1. Clone the repository: git clone https://github.com/CharlesCreativeContent/sentry-fastapi-demo.git
+1. Clone the repository: ```git clone https://github.com/CharlesCreativeContent/sentry-fastapi-demo.git```
 
-2. Navigate into the project directory: cd sentry-fastapi-demo
+2. Navigate into the project directory: ```cd sentry-fastapi-demo```
 
-3. Run the application locally: uvicorn main:app --reload
+3. Run the application locally: ```uvicorn main:app --reload```
 
 4. Open your browser and navigate to http://localhost:8000 to view the application.
 
