@@ -40,7 +40,8 @@ async def root():
 async def root():
     return Skins
 
-@app.get("/items/{item_id}")
-def read_root(item_id: str, request: Request):
+@app.get("/moves/{move_id}")
+def read_root(move_id: str, request: Request):
     client_host = request.client.host
-    return {"client_host": client_host, "item_id": item_id}
+    foundMove = Moves[move_id]
+    return {"move_id": move_id}
