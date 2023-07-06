@@ -63,6 +63,8 @@ def read_root(item_id: str):
 @app.get("/pokemon/{pokemon_id}")
 def read_root(pokemon_id: str):
     foundPokemon = Pokemon.get(pokemon_id,"Not Found")
+    jimmy = "johny"
+    john = "true"
     if foundPokemon == "Not Found":
         if pokemon_id.isnumeric():
             if 0 < int(pokemon_id) < 200:
