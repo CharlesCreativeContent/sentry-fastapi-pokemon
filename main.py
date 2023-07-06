@@ -82,7 +82,7 @@ def read_root(pokemon_id: str):
     foundPokemon = Pokemon.get(pokemon_id,"Not Found")
     if foundPokemon == "Not Found":
         if pokemon_id.isnumeric():
-            if 0 < int(pokemon_id) < 200:
+            if 0 < int(pokemon_id) < 898:
                 foundPokemon = check_id(int(pokemon_id))
     return {pokemon_id: foundPokemon}
 
