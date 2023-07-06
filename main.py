@@ -53,26 +53,21 @@ async def root():
 
 @app.get("/moves/{move_id}")
 def read_root(move_id: str):
-    foundMove = Moves.get(move_id,"Not Found")
-    return {move_id: foundMove}
+    return Moves.get(move_id,"Not Found")
 
 @app.get("/skins/{skin_id}")
 def read_root(skin_id: str):
-    foundSkin = Skins.get(skin_id,"Not Found")
-    return {skin_id: foundSkin}
+    return Skins.get(skin_id,"Not Found")
 
 @app.get("/types/{type_id}")
 def read_root(type_id: str):
-    foundType = Types.get(type_id,"Not Found")
-    return {type_id: foundType}
+    return Types.get(type_id,"Not Found")
 
 @app.get("/items/{item_id}")
 def read_root(item_id: str):
-    foundItem = Items.get(item_id,"Not Found")
-    return {item_id: foundItem}
+    return Items.get(item_id,"Not Found")
 
 def check_id(number):
-    found = "None"
     for poke in Pokemon.values():
         if poke["id"] == number:
             return poke
@@ -84,14 +79,12 @@ def read_root(pokemon_id: str):
         if pokemon_id.isnumeric():
             if 0 < int(pokemon_id) < 898:
                 foundPokemon = check_id(int(pokemon_id))
-    return {pokemon_id: foundPokemon}
+    return foundPokemon
 
 @app.get("/routes/{route_id}")
 def read_root(route_id: str):
-    foundRoute = Routes.get(route_id,"Not Found")
-    return {route_id: foundRoute}
+    return Routes.get(route_id,"Not Found")
 
 @app.get("/images/{image_id}")
 def read_root(image_id: str):
-    foundImage = Images.get(image_id,"Not Found")
-    return {image_id: foundImage}
+    return Images.get(image_id,"Not Found")
