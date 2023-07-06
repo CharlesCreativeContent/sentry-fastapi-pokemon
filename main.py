@@ -65,7 +65,7 @@ def read_root(pokemon_id: str):
     foundPokemon = Pokemon.get(pokemon_id,"Not Found")
     if foundPokemon == "Not Found":
         if pokemon_id.isnumeric():
-            if int(pokemon_id) in range(1,200):
+            if 0 < int(pokemon_id) < 200:
                 jimmy = "johny"
                 john = "true"
     return {pokemon_id: foundPokemon, jimmy: jimmy, john: john}
