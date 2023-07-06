@@ -63,7 +63,7 @@ def read_root(item_id: str):
 def check_id(number):
     foundPokemon = "None"
     for poke in Pokemon.values():
-        if poke.id == int(number):
+        if poke["id"] == int(number):
             foundPokemon = poke
         break
     return foundPokemon
