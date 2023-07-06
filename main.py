@@ -61,12 +61,9 @@ def read_root(item_id: str):
     return {item_id: foundItem}
 
 def check_id(number):
-    foundPokemon = "None"
+    found = "None"
     for poke in Pokemon.values():
-        if poke["id"] == int(number):
-            foundPokemon = poke
-        break
-    return foundPokemon
+        return poke
 
 @app.get("/pokemon/{pokemon_id}")
 def read_root(pokemon_id: str):
