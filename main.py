@@ -64,8 +64,10 @@ def read_root(item_id: str):
 def read_root(pokemon_id: str):
     foundPokemon = Pokemon.get(pokemon_id,"Not Found")
     if foundPokemon == "Not Found":
-        jimmy = pokemon_id.isnumeric()
-        john = int(pokemon_id)
+        if pokemon_id.isnumeric():
+            if int(pokemon_id) in range(1,200):
+                jimmy = "johny"
+                john = "true"
     return {pokemon_id: foundPokemon, jimmy: jimmy, john: john}
 
 @app.get("/routes/{route_id}")
