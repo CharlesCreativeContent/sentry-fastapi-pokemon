@@ -60,16 +60,21 @@ def read_root(item_id: str):
     foundItem = Items.get(item_id,"Not Found")
     return {item_id: foundItem}
 
+def check_id(number):
+    foundPokemon = "None"
+    for poke in values(Pokemon):
+        if poke.id == int(number):
+            foundPokemon = poke
+        break
+    return foundPokemon
+
 @app.get("/pokemon/{pokemon_id}")
 def read_root(pokemon_id: str):
     foundPokemon = Pokemon.get(pokemon_id,"Not Found")
     if foundPokemon == "Not Found":
         if pokemon_id.isnumeric():
             if 0 < int(pokemon_id) < 200:
-                for poke in values(Pokemon):
-                    if poke.id == int(pokemon_id):
-                        foundPokemon = poke
-                    break
+                return check_id(pokemon_id)
     return {pokemon_id: foundPokemon}
 
 @app.get("/routes/{route_id}")
