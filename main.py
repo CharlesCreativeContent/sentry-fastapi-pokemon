@@ -88,18 +88,14 @@ def read_root(pokemon_id: str):
         if pokemon_id.isnumeric():
             if 0 < int(pokemon_id) < 898:
                 foundPokemon = check_id(int(pokemon_id))
-    file_html = open("demo.html", "w")
-    file_html.write('''<html>
+    return '''<html>
     <head>
     <title>HTML File</title>
     </head> 
     <body>
     <p>''' + foundPokemon.name+ "is a "+foundPokemon.rarity+" "+foundPokemon.types[0]+" pokemon, that has an id of "+foundPokemon.id+" and has stats ATK "+foundPokemon.stats.attack+", DEF "+foundPokemon.stats.defense+", SPD "+ foundPokemon.stats.speed+", HP "+ foundPokemon.stats.hp +". Description: "+ foundPokemon.description + '''</p> 
     </body>
-    </html>''')
-# Saving the data into the HTML file
-    file_html.close()
-    return file_html
+    </html>'''
 
 @app.get("/routes/{route_id}")
 def read_root(route_id: str):
